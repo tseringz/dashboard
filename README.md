@@ -1,2 +1,2 @@
 # dashboard
-The odin project dashboard using grid
+The odin project dashboard using css grid
