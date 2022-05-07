@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type = "text/css" href="../dashboard/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" 
+    integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" 
+    referrerpolicy="no-referrer"></script>
+
+    <title>Gocrypto</title>
+</head>
+<body>
+
+<section class="c-hero">
+    <aside>
+        <nav class="c-nav">
+            <div class = "brand"><a href="http://"><h5>Gocrypto</h5></a></div>
+            <menu class="c-menu">
+                <a href="" class="c-menu__nav-link"><div class="c-menu-icon-wrapper">
+                    <img src="../dashboard/assets/icons/dashboard-icon-selected.svg" alt="dashboard icon dashboard selected" srcset="">
+                    </div><p>Dashboard</p></a>
+                <a href="" class="c-menu__nav-link"><div class="c-menu-icon-wrapper">
+                    <img src="../dashboard/assets/icons/Exchage-icon.svg" alt="Exchange icon" srcset="">
+                    </div><p>Exchange</p></a>
+                <a href="" class="c-menu__nav-link"><div class="c-menu-icon-wrapper">
+                    <img src="../dashboard/assets/icons/saving-icon.svg" alt="saving icon" srcset="">
+                    </div><p>Savings</p></a>
+                <a href="" class="c-menu__nav-link"><div class="c-menu-icon-wrapper">
+                    <img src="../dashboard/assets/icons/currencies-icon.svg" alt="" srcset="">
+                    </div><p>Currencies</p></a>
+                <a href="" class="c-menu__nav-link"><div class="c-menu-icon-wrapper">
+                    <img src="../dashboard/assets/icons/wallet-icon.svg" alt="" srcset="">
+                    </div><p>Wallet</p></a>
+                <a href="" class="c-menu__nav-link"><div class="c-menu-icon-wrapper">
+                    <img src="../dashboard/assets/icons/chart.svg" alt="" srcset="">
+                    </div><p>Charts</p></a>
+                <a href="" class="c-menu__nav-link"><div class="c-menu-icon-wrapper"><img src="../dashboard/assets/icons/food-icon.svg" alt = "food icon" srcset="">
+                </div><p>Food</p></a>
+                <a href="" class="c-menu__nav-link"><div class="c-menu-icon-wrapper"><img src="../dashboard/assets/icons/health-icon.svg" alt = "health icon" srcset="">
+                </div><p>Health</p></a>
+                <a href="" class="c-menu__nav-link"><div class="c-menu-icon-wrapper"><img src="../dashboard/assets/icons/setting-icon.svg" alt = "setting icon" srcset="">
+                </div><p>Setting</p></a>
+                <a href="" class="c-menu__nav-link"><div class="c-menu-icon-wrapper"><img src="../dashboard/assets/icons/profile-icon.svg" alt="" srcset="">
+                </div><p>Account</p></a>       
+            </menu>
+            <div class="c-nav__call-to-action">
+                <p> Illustration by <a href="https://icons8.com/illustrations/author/CkHJmwURlxnt">Olha Khomich</a> 
+                    from <a href="https://icons8.com/illustrations">Ouch!</a></p>
+                <img src="../dashboard/assets/3d-discover.png" alt="a man holding a laptop" srcset="">
+                <button class="discover">Discover Pro</button>
+            </div>
+        </nav>
+    </aside>
+
+    <main class="c-container">
+    <header class="c-header">
+        <div class="c-header__dashheading">
+            <p>Tenzin Tashi</p>
+            <h3>Dashboard</h3>
+        </div>
+        <input type="search" name="search" id="search" placeholder="Search crypto">
+    </header>
+    <div class="c-container__banner">
+        <div class="element-wrapper">
+            <h5>Easy to Manage Your <br>Crypto Transactions</h5>
+            <p>View your detail transaction here</p>
+            <button type = "button">Detail Transaction</button>
+        </div>
+        <img src="../dashboard/assets/3d-transaction.png" alt=" eletronic transaction by a person" srcset="">
+    </div>
+    <div class="c-portfolio">
+        <h6>My Portfolio</h6>
+        <div class="c-portfolio-element-wrapper">
+            <div class="c-portfolio__element">
+                <div class="c-portfolio-icon-wrapper bitcoin"><img src="../dashboard/assets/icons/bitcoin-icon.svg" 
+                    alt="bitcoin icon" srcset=""></div>
+                <div class="left"><span class = "title-bold">BTC<span class = "title-light">/BIDR</span></span><span class = "title-regular">Bitcoin</span></div>
+                <div class="right"><span class = "amount">$145,25</span><span class = "percentage-bitcoin">$0,4(47%)</span>
+                </div>
+            </div>
+            <div class="c-portfolio__element">
+                <div class="c-portfolio-icon-wrapper etherium"><img src="../dashboard/assets/icons/etherium-icon.svg" 
+                    alt="etherium icon" srcset=""></div>
+                    <div class="left"><span class = "title-bold">ETH<span class = "title-light">/BIDR</span></span><span class = "title-regular">Etherium</span></div>
+                    <div class="right"><span class = "amount">$250,25</span><span class = "percentage-etherium">$0,8(57%)</span>
+                    </div>
+                </div>
+            <div class="c-portfolio__element">
+                <div class="c-portfolio-icon-wrapper dogecoin"><img src="../dashboard/assets/icons/doge-coin-icon.svg" 
+                    alt="doge coin icon" srcset=""></div>
+                    <div class="left"><span class = "title-bold">DGC<span class = "title-light">/BIDR</span></span><span class = "title-regular">Dogecoin</span></div>
+                    <div class="right"><span class = "amount">$100,25</span><span class = "percentage-dogecoin">$0,2(33%)</span>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <div class="c-chart">
+        <div class="c-chart-icon"></div>
+        <p></p>
+        <div class="chart-wrapper">
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+
+    </main>
+
+    <div class="c-profile">
+        <div class="c-profile__account">
+            <div class="c-profile-notification"><img src="../dashboard/assets/icons/notification-icon.svg" alt="notification icon" srcset=""></div>
+            <div class="c-profile-pic"><img src="../dashboard/assets/tashi-profile-pic.png" alt="user profile pic" srcset=""><p>Tenzin Tashi</p></div>
+        </div>
+        <div class="c-balance">
+            <h6>My Cards</h6>
+            <div class="c-balance__card">
+                <p>Balance</p>
+                <h4>$435,922</h4>
+                <p>Monthly Profit</p>
+                <span>$435,922</span>
+                <div class="c-balance-capsule">
+                    <img src="../dashboard/assets/icons/arrow-up-icon.svg" alt="arrow up" srcset=""><span>+12%</span>
+                </div>
+            </div>
+            <div class="c-balance__arrow-slider">
+                <div class="c-balance__circle"></div>
+                <div class="c-balance__circle"></div>
+                <div class="c-balance__circle"></div>
+            </div>
+            <div class="c-request">
+                <div class="c-request-wrapper request"><div class="c-request-icon"><img src="../dashboard/assets/icons/long-arrow-up.svg" 
+                    alt="long up arrow" srcset=""></div><span>Request</span></div>
+               <div class="c-request-wrapper transfer"><div class="c-request-icon"><img src="../dashboard/assets/icons/long-arrow-down.svg" 
+                alt="long down arrow" srcset=""></div><span>Transfer</span></div>
+            </div>
+            <div class="c-transaction">
+                <h6>Recent Transaction</h6>
+                <div class="c-transaction-element-wrapper">
+                    <div class="c-transaction-element bitcoin"><img src="../dashboard/assets/icons/bitcoin-icon.svg" 
+                        alt="bitcoin icon" srcset=""></div>
+                    <div class="left"><span class = "title-bold">Buy bitcoin</span><span class = "title-regular">Today</span></div>
+                    <div class="right"><span class = "rate">-RP.600k</span>
+                    </div>
+                </div>
+                <div class="c-transaction-element-wrapper">
+
+                    <div class="c-transaction-element dogecoin"><img src="../dashboard/assets/icons/doge-coin-icon.svg" 
+                        alt="bitcoin icon" srcset=""></div>
+                    <div class="left"><span class = "title-bold">Doge coin sell</span><span class = "title-regular">Today</span></div>
+                    <div class="right"><span class = "rate">+RP.500k</span>
+                    </div>
+                </div>
+                <div class="c-transaction-element-wrapper">
+                    <div class="c-transaction-element etherium"><img src="../dashboard/assets/icons/etherium-icon.svg" 
+                        alt="bitcoin icon" srcset=""></div>
+                    <div class="left"><span class = "title-bold">Etherium sell</span><span class = "title-regular">Today</span></div>
+                    <div class="right"><span class = "rate">+RP.700k</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+    <script type = "text/javascript" src="../dashboard/script.js"></script>
+    
+</body>
+</html>

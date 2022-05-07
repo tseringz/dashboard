@@ -1,0 +1,777 @@
+/* importing google font called Source San Pro  */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+
+/* Using Meyer reset to reset CSS */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+/* Setting CSS variables */
+
+:root {
+
+    --primary-color: #4162FF;
+    --secondry-color: #59CCFB;
+    --primary-color-light-tint: #7088FF;
+    --primary-color-lighter-tint: #C2CCFF;
+    --dark-grey: #979AAA;
+    --light-grey: #DDDEE3;
+    --lighter-grey: #E9E9ED;
+    --white-color: #F4F4F6;
+    --black-color: #25262D;
+
+}
+
+body {
+
+    font-family: 'Source San Pro', Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+
+}
+
+.c-hero {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+aside {
+
+    width: 190px;
+    height: 100vh;
+    position: fixed;
+    background-color: var(--lighter-grey);
+}
+
+
+.c-profile {
+
+    width: 360px;
+    height: 100vh;
+    background-color: var(--lighter-grey);
+    padding-left: 60px;
+    padding-right: 60px;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+h3, h4, h5, h6 {
+
+    font-family: inherit;
+    font-weight: bold;
+
+}
+
+
+h3 {
+
+    font-size: 2.074rem;
+    margin-top: 8px;
+
+}
+
+h4 {
+
+    font-size: 1.728rem;
+    line-height: 40px;
+
+}
+
+h5 {
+
+
+    font-size: 1.44rem;
+
+}
+
+h6 {
+
+    font-size: 1.20rem;
+}
+
+p {
+
+    font-family: inherit;
+    font-size: 0.694rem;
+    margin-top: 8px;
+    color: var(--dark-grey);
+}
+
+
+a {
+
+    text-decoration: none;
+    color: var(--white-color);
+
+}
+
+.brand > a > h5 {
+
+    margin-top: 24px;
+    margin-left: 32px;
+    color: #4162FF;
+
+
+}
+
+.c-menu {
+
+    margin-top: 40px;
+    margin-left: 32px;
+    display: grid;
+    grid-template-rows: repeat(5, 48px);
+    grid-template-columns: repeat(2, 48px);
+    row-gap: 32px;
+    column-gap: 24px;
+
+}
+
+ .c-menu__nav-link {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+
+} 
+
+.c-menu__nav-link:nth-child(7n), .c-menu__nav-link:nth-child(8n), 
+.c-menu__nav-link:nth-child(9n), .c-menu__nav-link:nth-child(10n) {
+
+    margin-top: 24px;
+
+}
+
+.c-menu-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px; 
+    background-color: var(--light-grey);  
+    border-radius: 8px;
+
+}
+
+.c-menu-icon-wrapper > img {
+
+    width: 20px;
+    height: auto;
+}
+
+.c-nav__call-to-action {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+    margin-top: 64px;
+    margin-left: 16px;
+    width: 158px;
+    height: 158px;
+    padding: 16px 16px 16px 16px;
+    background-color: var(--primary-color);
+    border-radius: 24px;
+}
+.c-nav__call-to-action > p {
+
+    position: absolute;
+    top: 20px;
+    left: 24px;
+    font-size: 0.833rem;
+    width: 70px;
+    color: var(--white-color);
+    text-decoration: none;
+
+}
+
+.c-nav__call-to-action > img {
+
+    position: absolute;
+    width: 105px;
+    height: auto;
+    top: -40px;
+    right: 10px;
+
+}
+
+button {
+
+    cursor: pointer;
+
+}
+
+button.discover {
+
+    border: none;
+    width: 120px;
+    height: 40px;
+    font-size: 1rem;
+    background-color: var(--secondry-color);
+    border-radius: 16px;
+    text-align: center;
+    color: var(--white-color);
+}
+
+/* Main container section */
+
+.c-container {
+
+    width: calc(100vw - (190px + 360px));
+    height: auto;
+    margin-left: 190px;
+    padding-left: 56px;
+    padding-right: 56px;
+    
+}
+
+.c-header {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+
+}
+
+.c-header > input {
+
+    border: none;
+    width: 240px;
+    padding-left: 48px;
+    height: 48px;
+    border-radius: 16px;
+    background-color: var(--lighter-grey);
+    background-image: url('../dashboard/assets/icons/search-icon.svg');
+    background-repeat: no-repeat;
+    background-position: 16px;
+    background-size: 16px 16px;
+
+}
+
+.c-container__banner {
+  
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 48px;
+    width: 100%;
+    height: 200px;
+    background-color: var(--primary-color);
+    border-radius: 32px;
+    padding: 24px;
+    color: var(--white-color);
+
+}
+
+.element-wrapper > p {
+
+    font-size: 0.833rem;
+    color: var(--white-color);
+}
+
+.element-wrapper > button {
+    
+    margin-top: 32px;
+    width: 160px;
+    height: 48px;
+    background-color: var(--secondry-color);
+    border: none;
+    border-radius: 16px;
+    color: var(--white-color);
+
+}
+
+.c-container__banner > img {
+
+    position: absolute;
+    width: 270px;
+    top: -55px;
+    right: -15px;
+}
+
+.c-portfolio {
+
+    margin-top: 32px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.c-portfolio-element-wrapper {
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+.c-portfolio__element {
+
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    height: 56px;
+    padding: 8px 4px 8px 8px;
+    background-color: var(--lighter-grey);
+    border-radius: 16px;
+    margin-right: 32px;
+    margin-top: 16px;
+}
+
+
+.c-portfolio-icon-wrapper.bitcoin {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+    background-color: var(--secondry-color);
+    border-radius: 8px;
+
+}
+
+.c-portfolio-icon-wrapper.etherium {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+
+}
+
+.c-portfolio-icon-wrapper.dogecoin {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+    background-color: var(--primary-color-light-tint);
+    border-radius: 8px;
+
+}
+
+.c-portfolio-icon-wrapper > img {
+
+    width: 16px;
+    height: auto;
+
+}
+
+.left {
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-right: 24px;
+    margin-top: 4px;
+}
+
+.right {
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 4px;
+
+}
+
+.title-bold {
+
+    font-size: 0.694rem;
+    font-weight: bold;
+
+}
+
+.title-light {
+
+    font-size: 0.694rem;
+    font-weight: 400;
+    color: var(--dark-grey);
+
+}
+
+.title-regular {
+    margin-top: 8px;
+    font-size: 0.694rem;
+    color: var(--dark-grey);
+
+}
+
+.amount {
+
+    font-size: 0.694rem;
+    font-weight: bold;
+    color: var(--black-color);
+
+}
+
+.percentage-bitcoin {
+
+    margin-top: 10px;
+    font-size: 0.694rem;
+    font-weight: 400;
+    color: var(--secondry-color);
+    
+}
+
+.percentage-etherium {
+
+    margin-top: 10px;
+    font-size: 0.694rem;
+    font-weight: 400;
+    color: var(--primary-color);
+
+}
+
+.percentage-dogecoin {
+
+    margin-top: 10px;
+    font-size: 0.694rem;
+    font-weight: 400;
+    color: var(--primary-color);
+
+}
+
+
+.c-chart {
+
+ height: 190px;
+ width: 100%;
+ margin-top: 32px;
+ background-color: var(--lighter-grey);
+ border-radius: 16px;
+
+}
+
+
+/* Profile details */
+
+.c-profile__account {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 24px;
+
+}
+
+.c-profile-notification > img {
+
+    width: 16px;
+    height: auto;
+    margin-right: 32px;
+    margin-top: 10px;
+}
+
+.c-profile-pic {
+
+    display: flex;
+    flex-direction: row;
+}
+
+.c-profile-pic > img {
+
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+
+}
+
+.c-profile-pic > p {
+    
+    font-size: 1rem;
+    
+}
+
+.c-balance {
+
+    margin-top: 32px;
+}
+
+.c-balance__card {
+
+    position: relative;
+    width: 100%;
+    height: 180px;
+    background-color: var(--secondry-color);
+    padding: 16px;
+    border-radius: 24px;
+    margin-top: 16px;
+
+}
+
+.c-balance__card > p {
+
+    color: var(--white-color);
+    font-size: 0.833rem;
+    margin-bottom: 4px;
+
+}
+
+.c-balance__card > h4 {
+
+    color: var(--white-color);
+    margin-top: 4px;
+    margin-bottom: 32px;
+}
+
+.c-balance__card > span {
+
+    color: var(--white-color);
+    font-weight: bold;
+    margin-top: 24px;
+
+}
+
+.c-balance-capsule {
+    position: absolute;
+    right: 30px;
+    bottom: 40px;
+    width: 56px;
+    height: 24px;
+    padding-top: 2px;
+    padding-left: 8px;
+    border-radius: 16px;
+    background-color: var(--primary-color-lighter-tint);
+
+}
+
+.c-balance-capsule > img {
+
+    width: 8px;
+    height: auto;
+    margin-right: 2px;
+
+}
+
+.c-balance-capsule > span {
+
+    font-size: 0.696rem;
+    color: var(--white-color);
+
+}
+
+.c-balance__arrow-slider {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 16px;
+    column-gap: 16px;
+
+}
+
+.c-balance__circle {
+
+    width: 10px;
+    height: 10px;
+    border-radius: 8px;
+    background-color: var(--dark-grey);
+
+}
+.c-request {
+
+    display: flex;
+    flex-direction: row;
+    column-gap: 24px;
+    margin-top: 24px;
+
+}
+
+.c-request-wrapper.request {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+    height: 48px;
+    padding: 6px 8px 6px 8px;
+    background-color: var(--primary-color);
+    border-radius: 16px;
+
+}
+
+.c-request-wrapper.transfer {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+    height: 48px;
+    padding: 6px 8px 6px 8px;
+    background-color: var(--secondry-color);
+    border-radius: 16px;
+
+}
+
+.c-request-icon {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    margin-right: 8px;
+    background-color: var(--white-color);
+    border-radius: 8px;
+
+}
+
+.c-request-icon > img {
+
+    width: 16px;
+    height: 16px;
+
+}
+
+.c-request-icon + span {
+
+    font-size: 0.696rem;
+    color: var(--white-color);
+
+}
+
+.c-transaction {
+
+    margin-top: 32px;
+}
+.c-transaction > h5 {
+
+    margin-bottom: 16px;
+
+}
+.c-transaction-element-wrapper {
+    position: relative;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 56px;
+    padding: 8px 4px 8px 8px;
+    background-color: var(--light-grey);
+    border-radius: 16px;
+    margin-right: 32px;
+    margin-top: 16px;
+}
+
+.c-transaction-element > img {
+
+    width: 16px;
+    height: auto;
+
+}
+
+.c-transaction-element.bitcoin {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+    background-color: var(--secondry-color);
+    border-radius: 8px;
+
+
+}
+
+.c-transaction-element.dogecoin {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+    background-color: var(--primary-color-light-tint);
+    border-radius: 8px;
+
+
+}
+
+
+.c-transaction-element.etherium {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+
+
+}
+
+.rate {
+
+    position: absolute;
+    top: 10px;
+    right: 18px;
+    color: var(--primary-color);
+    margin-top: 12px;
+    margin-right: 16px;
+    font-weight: bold;
+    font-size: 0.696rem;
+}
+
+.c-chart {
+
+    padding: 8px 20px 20px 20px;
+
+}
+.chart-wrapper {
+
+    position: relative;
+
+    width: 520px;
+    height: 170px;
+
+}
