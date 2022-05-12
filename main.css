@@ -27,10 +27,12 @@ time, mark, audio, video {
 
 article,aside,details,figcaption,figure,
 footer,header,hgroup,menu,nav,section { 
+
     display:block;
+
 }
 
-* {
+*, *::after, *::before {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -64,6 +66,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
 }
 
 aside {
@@ -72,6 +75,7 @@ aside {
     height: 100vh;
     position: fixed;
     background-color: var(--lighter-grey);
+
 }
 
 
@@ -113,7 +117,6 @@ h4 {
 
 h5 {
 
-
     font-size: 1.44rem;
 
 }
@@ -129,6 +132,7 @@ p {
     font-size: 0.694rem;
     margin-top: 8px;
     color: var(--dark-grey);
+
 }
 
 
@@ -136,7 +140,6 @@ a {
 
     text-decoration: none;
     color: var(--white-color);
-
 }
 
 .brand > a > h5 {
@@ -144,7 +147,6 @@ a {
     margin-top: 24px;
     margin-left: 32px;
     color: #4162FF;
-
 
 }
 
